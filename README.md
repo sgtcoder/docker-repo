@@ -1,6 +1,4 @@
-# Docker Repo
-Builder for the repo.sgtcoder.com apt repository: Debian slim with aptly, GnuPG, curl and jq.
+# Docker Aptly
+repo.sgtcoder.com: nginx serving the apt repository, plus an hourly aptly build (`/scripts/build_repo.sh`, mounted from the server).
 
-Runs `build_repo.sh` from the mounted `/scripts` folder, then exits. Built nightly on the server; nginx serves the published files.
-
-- `sgtcoder/repo:latest` - linux/amd64
+- `sgtcoder/aptly:latest` - linux/amd64, Debian slim, listens on 8080
